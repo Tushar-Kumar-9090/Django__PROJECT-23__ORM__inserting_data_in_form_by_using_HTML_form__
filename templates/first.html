@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+
+        h1{
+            background-color: blue;
+            color: yellow;
+            border-radius: 30px;
+            padding: 10px;
+            
+        }
+
+        #un{
+            height: 25px;
+            border-radius: 5px;
+            border: 2px solid slateblue;
+        }
+
+        #pw{
+            height: 25px;
+            border-radius: 5px;
+            border: 2px solid slateblue;
+        }
+
+        #submit{
+            background-color: tomato;
+            width: 8%;
+            height: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            border: #fff;
+            margin-left: 65px;
+        }
+
+        #submit:hover{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>HTML FORM</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="un"><b>Username: </b></label>
+            <input type="text" name="un" id="un" placeholder="Username"> <br><br>
+
+            <label for="pw"><b>Password:</b></label>
+            <input type="password" name="pw" id="pw" placeholder="Password"> <br><br>
+
+            <input type="submit" id="submit">
+
+
+
+        </form>
+
+    </center>
+</body>
+</html>
